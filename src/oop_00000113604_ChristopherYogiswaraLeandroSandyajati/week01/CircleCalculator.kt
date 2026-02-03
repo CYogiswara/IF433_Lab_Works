@@ -7,9 +7,7 @@ fun main(args: Array<String>) {
     val area: Double = pi * radius * radius
 
     println("Radius: $radius, Area: $area")
-    checkSize(area)
+    println(checkSize(area))
 }
 
-fun checkSize(area: Double){
-    val size = if(area > 100) println("This is a big circle") else println("This is a small circle")
-}
+fun checkSize(area: Double) = if (area > 100) "This is a Big Circle" else "This is a Small Circle"
