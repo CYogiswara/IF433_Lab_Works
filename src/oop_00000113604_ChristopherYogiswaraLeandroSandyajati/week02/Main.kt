@@ -41,5 +41,6 @@ fun main(){
 //        println("Pilihan ngawur, pendaftaran batal!")
 //    }
 
-    library()
+//    library()
+    game()
 }
