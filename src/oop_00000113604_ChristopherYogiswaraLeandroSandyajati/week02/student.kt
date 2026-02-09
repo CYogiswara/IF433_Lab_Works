@@ -3,7 +3,8 @@ package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.week02
 class Student(
     val name: String,
     val nim: String,
-    val major: String
+    val major: String,
+    val gpa: Double = 0.0
 ){
     init{
         if(nim.length != 5){
