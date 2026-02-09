@@ -5,10 +5,6 @@ class Loan(
     val borrower: String,
     val loanDuration: Int = 1
 ){
-    init{
-
-    }
-
     fun calculateFine(): Int{
         if(loanDuration > 3){
             return (loanDuration - 3) * 2000
