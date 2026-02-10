@@ -8,7 +8,7 @@ class Hero(
     val baseDamage: Int
 ){
     fun attack(targetName: String){
-        println("$name menebas ${targetName}!")
+        println("Musuh menebas ${targetName}!")
     }
 
     fun takeDamage(damage: Int): Int{
@@ -58,8 +58,8 @@ fun game(){
 
         if(enemyHp > 0){
             var enemyDamage: Int = (10..20).random()
+            heroObj.attack(heroObj.name)
             heroObj.takeDamage(enemyDamage)
-
             println("Musuh menyerang dengan damage: ${enemyDamage}")
             println("Hp $heroName: ${heroObj.hp}")
         }
