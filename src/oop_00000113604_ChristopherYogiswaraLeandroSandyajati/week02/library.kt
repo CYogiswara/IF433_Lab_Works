@@ -2,6 +2,22 @@ package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.week02
 
 import java.util.Scanner
 
+
+class Loan(
+    val bookTitle: String,
+    val borrower: String,
+    val loanDuration: Int = 1
+){
+    fun calculateFine(): Int{
+        if(loanDuration > 3){
+            return (loanDuration - 3) * 2000
+        }else if(loanDuration <= 3){
+            return 0
+        }
+        return 0
+    }
+}
+
 fun library(){
     val scanner = Scanner(System.`in`)
 
@@ -21,4 +37,8 @@ fun library(){
     val details = Loan(title, borrower, duration)
 
     println("${details.borrower} meminjam ${details.bookTitle} selama ${details.loanDuration} hari, total denda: ${details.calculateFine()}")
+}
+
+fun main(){
+    library()
 }
