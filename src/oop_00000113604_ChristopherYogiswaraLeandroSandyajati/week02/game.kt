@@ -4,7 +4,7 @@ import java.util.Scanner
 
 class Hero(
     val name: String,
-    var hp: Int = 100,
+    var hp: Int,
     val baseDamage: Int
 ){
     fun attack(targetName: String){
