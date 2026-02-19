@@ -11,9 +11,21 @@ package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.week03
 //    println("Pajak yang harus dibayar: ${e.tax}")
 //}
 
-fun main(){
-    val weapon = Weapon("Weapon1", 9999)
+//fun main(){
+//    val weapon = Weapon("Weapon1", 9999)
+//
+//    println(weapon.damage)
+//    println(weapon.tier)
+//}
 
-    println(weapon.damage)
-    println(weapon.tier)
+fun main(){
+    val player = Player("Yogi", 0)
+    println("Nama: ${player.username}")
+    println("level: ${player.level}")
+
+    player.addXp(50)
+    println("level baru: ${player.level}")
+
+    player.addXp(60)
+    println("level baru: ${player.level}")
 }
