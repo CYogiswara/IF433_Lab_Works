@@ -6,13 +6,17 @@ class Weapon(name: String, damage: Int){
         set(value){
             if(value < 0){
                 println("Damage tidak bisa < 0")
-            }else if(value  > 1000){
+            }else if(value > 1000){
                 println("Terlalu overpowered!")
                 field = 1000
             }else{
                 field = value
             }
         }
+
+    init{
+        this.damage = damage
+    }
 
     val tier: String
         get(){
