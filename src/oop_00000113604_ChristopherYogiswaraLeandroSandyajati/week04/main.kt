@@ -17,4 +17,10 @@ fun main(){
     electricCar.accelerate()
     electricCar.honk()
     electricCar.openTrunk()
+
+    println("\n--- Developer ---")
+    val developer = Developer("Yogi", 10000000, "Kotlin")
+    developer.work()
+    val totalGajiDeveloper = developer.calculateBonus()
+    println(totalGajiDeveloper)
 }
