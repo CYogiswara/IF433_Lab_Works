@@ -1,0 +1,3 @@
+package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.tes.testingMultiple
+
+class parent2
