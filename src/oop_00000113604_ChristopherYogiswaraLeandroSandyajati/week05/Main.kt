@@ -1,23 +1,12 @@
 package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.week05
 
 fun main(){
-    val dosenObject = Dosen("YogiDosen", "02932")
-    val adminObject = Admin("YogiAdmin")
+    val eWalletObject = EWallet("yogi", 50.000)
+    val creditCardObject = creditCard("yogi", 100.000)
 
-    val daftarPegawai: List<Pegawai> = listOf(dosenObject, adminObject)
+    val PaymentMethods: List<PaymentMethod> = listOf(eWalletObject, creditCardObject)
 
-    for(pegawai in daftarPegawai){
-        pegawai.bekerja()
-
-        when (pegawai){
-            is Dosen -> {
-                println("Terdeteksi dosen ${pegawai.nidn}")
-                pegawai.bekerja()
-            }
-            is Admin -> {
-                println("Terdeteksi admin ${pegawai.nama}")
-                pegawai.doAdminWork()
-            }
-        }
+    for(PaymentMethod in PaymentMethods){
+        PaymentMethod.processPayment(75000.0)
     }
 }
