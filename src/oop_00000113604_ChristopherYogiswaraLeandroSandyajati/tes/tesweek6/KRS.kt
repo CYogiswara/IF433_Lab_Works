@@ -10,4 +10,8 @@ class KRS (override val nama: String, override val namaSiswa: String) : Mahasisw
         println("$nama serang")
         println("$namaSiswa serang")
     }
+
+    override fun main_game() {
+        super<Mahasiswa>.main_game()
+    }
 }

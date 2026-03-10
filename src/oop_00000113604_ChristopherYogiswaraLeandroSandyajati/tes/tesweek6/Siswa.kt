@@ -7,4 +7,8 @@ interface Siswa {
         println("siswa jajan")
     }
 
+    fun main_game(){
+        println("Mahasiswa main game di kelas")
+    }
+
 }

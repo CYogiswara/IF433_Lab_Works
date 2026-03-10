@@ -5,5 +5,7 @@ interface Mahasiswa {
 
     fun belajar()
     fun serang()
-
+    fun main_game(){
+        println("Mahasiswa main game di kelas")
+    }
 }
