@@ -27,4 +27,12 @@ fun main(){
     println("Destructured: $username berumur $age")
     println(reg1)
     println("Sama? ${data1 == data2}")
+
+    println("=== TEST SEALED CLASS ===")
+    val response: ApiResponse = ApiResponse.Success("Data berhasil ditarik")
+
+    val uimessage = when(response) {
+        is ApiResponse.Success -> "Tampilkan ${response.data}"
+        is ApiResponse.Error -> "Munculkan alert: ${response.message}"
+    }
 }
