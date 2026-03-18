@@ -10,5 +10,9 @@ class Weapon private constructor(val item: GameItem, val durability: Int){
             val epicWeapon = GameItem("Pedang emas gg", 20, ItemRarity.EPIC)
             return Weapon(epicWeapon, 150)
         }
+        fun upgradedWeapon(base: Weapon, newDamage: Int): Weapon{
+            val upgradedItem = base.item.copy(damage = newDamage)
+            return Weapon(upgradedItem, base.durability)
+        }
     }
 }

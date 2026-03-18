@@ -49,4 +49,17 @@ fun main(){
     println("Name: ${starterWeapon.item.name}")
     println("Damage: ${starterWeapon.item.damage}")
     println("Rarity: ${starterWeapon.item.rarity}")
+
+    val upgradedSword = Weapon.upgradedWeapon(starterWeapon, 25)
+    println("Upgraded damage: ${upgradedSword.item.damage}")
+
+    val safeZoneResponse: BattleState = BattleState.SafeZone
+    val MonsterEncounterResponse = BattleState.MonsterEncounter("goblin nakal")
+    val LootDropResponse = BattleState.LootDropped(upgradedSword.item)
+    val GameOverResponse = BattleState.GameOver("Terkena jebakan racun")
+
+    processEvent(safeZoneResponse)
+    processEvent(MonsterEncounterResponse)
+    processEvent(LootDropResponse)
+    processEvent(GameOverResponse)
 }
