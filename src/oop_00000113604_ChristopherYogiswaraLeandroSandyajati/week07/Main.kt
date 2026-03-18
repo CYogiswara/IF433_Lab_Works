@@ -42,4 +42,11 @@ fun main(){
     println("=== Singleton Simulate ====")
     GameManager.startGame()
     GameManager.startGame()
+
+    println("=== Simulate Factory & Enum ===")
+    println(ItemRarity.LEGENDARY.dropChance)
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Name: ${starterWeapon.item.name}")
+    println("Damage: ${starterWeapon.item.damage}")
+    println("Rarity: ${starterWeapon.item.rarity}")
 }
