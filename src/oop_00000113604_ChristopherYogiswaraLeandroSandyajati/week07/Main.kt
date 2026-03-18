@@ -38,4 +38,8 @@ fun main(){
     }
 
     println(uimessage)
+
+    println("=== Singleton Simulate ====")
+    GameManager.startGame()
+    GameManager.startGame()
 }
