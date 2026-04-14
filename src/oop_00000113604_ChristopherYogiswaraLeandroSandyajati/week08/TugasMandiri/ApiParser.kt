@@ -28,8 +28,15 @@ class ApiParser(){
         }
 
         val transactionId = JavaPaymentService.processPayment(id)!!
-
         println(transactionId)
         return true
+    }
+
+    for(raw in rawApiData){
+        try{
+
+        }catch{
+
+        }
     }
 }
