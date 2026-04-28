@@ -6,4 +6,7 @@ fun main(){
     coinRepo.add(Coin("USDT", 70000.0))
 
     val response = ApiResponse("200 OK", coinRepo.getAll())
+
+    val res = listOf(response)
+    res.forEach { println(it) }
 }
