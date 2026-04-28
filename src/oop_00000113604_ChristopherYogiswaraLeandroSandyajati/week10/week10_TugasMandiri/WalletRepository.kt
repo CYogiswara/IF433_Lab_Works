@@ -1,10 +1,7 @@
 package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.week10.week10_TugasMandiri
 
-interface Named {
-    val name: String
-}
 
-class WalletRepository<T: Named>{
+class WalletRepository<T>{
     private val items =  mutableListOf<T>()
 
     fun add(item: T){
@@ -15,7 +12,7 @@ class WalletRepository<T: Named>{
         return items
     }
 
-    fun findByName(query: String): List<T> {
-        return items.filter { it.name.contains(query, ignoreCase = true) }
+    fun findBy(predicate: (T) -> Boolean): List<T> {
+        return items.filter(predicate)
     }
 }

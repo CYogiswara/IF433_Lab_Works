@@ -2,3 +2,4 @@ package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.week10.week10_Tuga
 
 val coinRepo = WalletRepository<Coin>()
 
+val txRepo = WalletRepository<Transaction>()
