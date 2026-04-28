@@ -12,4 +12,9 @@ fun main(){
 
     val itemPrice = PairBox("Bitcoin", 65000)
     println("asset: ${itemPrice.key}, harga: ${itemPrice.value} USD")
+
+    println("=== TEST GENETIC FUNCTION ===")
+    printData(3.14)
+    val results = processData("Stable coin")
+    println("Hasil proses: $results")
 }
