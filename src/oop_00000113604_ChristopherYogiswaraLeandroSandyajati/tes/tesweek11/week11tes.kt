@@ -14,6 +14,16 @@ fun String.RubahHurufBesarDepan(): String{
     return hasil
 }
 
+fun String.TentukanKelulusan(nilai: Int): String{
+    var hasil = ""
+    if(nilai> 70){
+        hasil = "lulus"
+    }else{
+        hasil = "Tidak lulus"
+    }
+    return " "
+}
+
 fun main(){
     println("Yogi".dasarExtention())
 
@@ -21,4 +31,6 @@ fun main(){
     println(nama1.uppercase())
 
     println("Budi udin".RubahHurufBesarDepan())
+
+    println("Masukan nilai kamu:".TentukanKelulusan(71))
 }

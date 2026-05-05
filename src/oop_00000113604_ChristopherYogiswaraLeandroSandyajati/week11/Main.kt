@@ -8,4 +8,12 @@ fun main(){
     val text: String?= null
 
     println("Apakah null/empty? ${text.isNullOrEmpty()}")
+
+    println("=== TEST RUN FUNCTION ===")
+    val results = "Kotlin".run{
+        println("Memproses kata: $this")
+        length * 2
+    }
+
+    println("Hasil kalkulasi: $results")
 }
