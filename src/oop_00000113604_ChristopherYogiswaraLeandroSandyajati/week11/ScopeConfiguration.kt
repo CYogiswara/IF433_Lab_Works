@@ -2,6 +2,7 @@ package oop_00000113604_ChristopherYogiswaraLeandroSandyajati.week11
 
 data class User(var name: String = "", var age: Int = 0)
 
+
 fun main(){
     println("=== TEST APPLY ===")
     val user = User().apply{
@@ -9,4 +10,11 @@ fun main(){
         age = 19
     }
     println(user)
+
+    println("=== TEST ALSO ===")
+    val numbers = mutableListOf(1, 2, 3, 4, 5)
+    numbers.also{
+        println("Log sebelum ditambah: $it")
+    }.add(6)
+    println("Log setelah ditambah: $numbers")
 }
