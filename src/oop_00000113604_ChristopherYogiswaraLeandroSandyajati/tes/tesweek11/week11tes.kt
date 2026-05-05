@@ -35,6 +35,8 @@ fun String?.CekNullDanEmpty(): String{
     return hasil
 }
 
+
+
 fun main(){
     println("Yogi".dasarExtention())
 
