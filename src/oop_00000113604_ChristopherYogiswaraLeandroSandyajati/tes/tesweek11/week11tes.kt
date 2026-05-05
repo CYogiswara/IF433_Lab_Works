@@ -46,4 +46,8 @@ fun main(){
     println("Budi udin".RubahHurufBesarDepan())
 
     println("Masukan nilai kamu:".TentukanKelulusan(71))
+
+    var nilaiKamu = 70.run{
+        println(this)
+    }
 }
