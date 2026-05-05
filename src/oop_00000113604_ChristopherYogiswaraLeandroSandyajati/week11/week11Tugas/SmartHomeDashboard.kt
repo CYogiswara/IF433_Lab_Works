@@ -44,4 +44,9 @@ fun main(){
             device -> println("Nama: ${device.name}}, category: ${device.category}, status: ${device.isOnline}, powerload: ${device.powerLoad}")
         }
     }
+
+    val totalPower = homeDevices.run {
+        sumOf{ it.powerLoad }
+    }
+    println(totalPower)
 }
