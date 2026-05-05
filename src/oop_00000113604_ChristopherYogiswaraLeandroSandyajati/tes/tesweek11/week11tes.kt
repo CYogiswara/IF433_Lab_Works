@@ -24,6 +24,17 @@ fun String.TentukanKelulusan(nilai: Int): String{
     return " "
 }
 
+fun String?.CekNullDanEmpty(): String{
+    var hasil = ""
+
+    if(this == null ||this.isEmpty()){
+        hasil = "Gaboleh null"
+    }else{
+        hasil = "Password kamu $this"
+    }
+    return hasil
+}
+
 fun main(){
     println("Yogi".dasarExtention())
 

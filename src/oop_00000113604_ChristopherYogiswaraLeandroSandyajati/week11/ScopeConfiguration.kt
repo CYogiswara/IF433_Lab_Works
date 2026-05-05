@@ -17,4 +17,9 @@ fun main(){
         println("Log sebelum ditambah: $it")
     }.add(6)
     println("Log setelah ditambah: $numbers")
+
+    println("=== TEST WITH ===")
+    with(user){
+        println("User detail -> nama: $name, umur: $age")
+    }
 }
