@@ -49,4 +49,8 @@ fun main(){
         sumOf{ it.powerLoad }
     }
     println(totalPower)
+
+    homeDevices.forEach {
+        println(it.diagnose())
+    }
 }
