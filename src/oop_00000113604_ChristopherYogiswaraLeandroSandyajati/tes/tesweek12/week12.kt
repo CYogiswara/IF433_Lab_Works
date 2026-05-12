@@ -31,6 +31,18 @@ fun cek_nilai(nilai: Int){
     }
 }
 
+class cek_saldo_rekening(val pengeluaran: Int, val saldo: Int):
+        Exception("saldo sisa: ${saldo}, gak cukup ${pengeluaran}")
+
+class transaksi_keuanggan(val totalBelanja: Int){
+    fun narik_uang(balance: Int){
+        if(totalBelanja > balance){
+            throw cek_saldo_rekening(totalBelanja, balance)
+        }else{
+            println("transaksi berhasil: ${balance - totalBelanja}")
+        }
+    }
+}
 fun main(){
     pembagian()
     cek_tipe_variable()
@@ -40,4 +52,7 @@ fun main(){
     }catch(e:Exception){
         println("Ada error ${e.message}")
     }
+
+    val trx = transaksi_keuanggan(10000)
+    trx.narik_uang(500)
 }
