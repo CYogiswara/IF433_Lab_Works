@@ -23,7 +23,21 @@ fun cek_tipe_variable(){
     println("angka: $angka")
 }
 
+fun cek_nilai(nilai: Int){
+    if(nilai < 0){
+        throw IllegalArgumentException("nilai is negative")
+    }else{
+        println("Nilai: ${nilai}")
+    }
+}
+
 fun main(){
     pembagian()
     cek_tipe_variable()
+
+    try{
+        cek_nilai(-10)
+    }catch(e:Exception){
+        println("Ada error ${e.message}")
+    }
 }
