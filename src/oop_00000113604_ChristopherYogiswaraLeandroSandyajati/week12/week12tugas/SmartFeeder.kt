@@ -28,4 +28,10 @@ fun main(){
     }finally{
         println("Siklus pengecekan dispeser pagi selesai!")
     }
+
+    runCatching {
+        dispenseKibble( 30, 1000, false)
+    }
+
+    println("=== Runcatching ===")
 }
