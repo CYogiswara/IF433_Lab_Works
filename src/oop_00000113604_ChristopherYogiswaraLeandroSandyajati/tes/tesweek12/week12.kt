@@ -43,7 +43,22 @@ class transaksi_keuanggan(val totalBelanja: Int){
         }
     }
 }
+
+fun multiple_catch(input: String){
+    try{
+        val angka: Int = input.toInt()
+        val hitungBagi: Int = angka/0
+        println("Hasil nbago ${hitungBagi}")
+    }catch(e:NumberFormatException){
+        println("Ga bisa bagi huruf")
+    }catch(e: ArithmeticException){
+        println("Tidak bisa dibagi 0")
+    }catch(e: Exception){
+        println("Ada error dimmultiple catch")
+    }
+}
 fun main(){
+    multiple_catch("abc")
     pembagian()
     cek_tipe_variable()
 
