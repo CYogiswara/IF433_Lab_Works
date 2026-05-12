@@ -4,4 +4,5 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
     require(requestedGram > 0){
         "porsi kibble harus lebih dari 0gr"
     }
+    return availableGram - requestedGram
 }
