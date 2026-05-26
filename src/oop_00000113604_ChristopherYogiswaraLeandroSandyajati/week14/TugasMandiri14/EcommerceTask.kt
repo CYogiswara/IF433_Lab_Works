@@ -41,6 +41,25 @@ class safeOrderProcessor(
     }
 }
 
+interface PricingStrategy{
+    fun calculate(price:Double): Double
+    fun customerType(): String
+}
+
+class VipPricing(): PricingStrategy{
+    override fun calculate(price:Double): Double {
+        return price*0.90
+    }
+    override fun customerType(): String  = "VIP"
+}
+
+class RegularPricing(): PricingStrategy{
+    override fun calculate(price:Double): Double {
+        return price
+    }
+    override fun customerType(): String = "REGULAR"
+}
+
 class BadOrderProcessor {
     // VIOLATION: Hardcoded File I/O (DIP), Melakukan kalkulasi + I/O + Notifikasi sekaligus
     private val file = File("orders.csv")
